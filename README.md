@@ -1,6 +1,6 @@
 # Trebel
 
-<img src="assets/images/Logo1.png" alt="Logo" width="200" style="display: block; margin: 0 auto;">
+<img src="assets/images/logo1.png" alt="Logo" width="600" style="display: block; margin: 0 auto 10px auto;">
 
 Brighten up your day with music 😎
 
@@ -14,7 +14,7 @@ Welcome to **Trebel**, your ultimate destination for an unparalleled music strea
 
 Trebel is your ultimate music streaming app, designed to keep the vibes high and the music flowing. Whether you're chilling at home, working out, or on the go, Trebel has got you covered. With Trebel, you can:
 
-<img src="assets/images/2.png" alt="Listening to music" width="300" style="display: block; margin: 20px auto;"> <!-- Ganti dengan path ke gambar yang sesuai -->
+<img src="assets/images/2.png" alt="Listening to music" width="600" style="display: block; margin: 20px auto;"> <!-- Ganti dengan path ke gambar yang sesuai -->
 
 - **Stream unlimited music** for free 🎵
 - **Download songs** and listen offline 📲
@@ -23,7 +23,22 @@ Trebel is your ultimate music streaming app, designed to keep the vibes high and
 
 Say goodbye to boring moments and hello to a world of endless musical possibilities! 🌟
 
-<img src="assets/images/3.png" alt="Music Enjoyment" width="300" style="display: block; margin: 20px auto;"> <!-- Ganti dengan path ke gambar yang sesuai -->
+### Why Choose Trebel?
+
+At Trebel, we believe music is more than just a background noise – it's a way of life. Here are some reasons why Trebel should be your go-to music streaming app:
+
+🎵 **Feel the Beat, Anytime, Anywhere!**
+Music isn't just about listening – it's about feeling. With Trebel, you get a personalized music experience that fits your lifestyle. Our intuitive interface and user-friendly features make it easy to find your groove and keep it going. Plus, with our offline mode, the music never stops, even when the signal does.
+
+🌟 **Discover Your Soundtrack**
+Trebel offers a world of music at your fingertips. From the latest hits to classic tunes, find songs that match your vibe. Feeling happy, sad, or ready to party? We've got playlists for every mood! 🎉
+
+🔥 **Join the Music Revolution**
+Become part of the Trebel community and connect with fellow music lovers. Share your favorite tracks, explore new genres, and stay updated with exclusive content. Music is better when shared! ❤️
+
+Relax with Trebel, where every song is a new adventure. Whether you're winding down after a long day, getting pumped for a workout, or setting the mood for a special occasion, Trebel has the perfect playlist for you.
+
+<img src="assets/images/3.png" alt="Music Enjoyment" width="600" style="display: block; margin: 20px auto;"> <!-- Ganti dengan path ke gambar yang sesuai -->
 
 ## Features
 
@@ -44,23 +59,7 @@ Celebrate your relaxing, happy, and even sad moments with our awesome features �
 
 Isn't that awesome?
 
-<img src="assets/images/4.png" alt="Music Vibes" width="300" style="display: block; margin: 20px auto;"> <!-- Ganti dengan path ke gambar yang sesuai -->
-
-## Why Trebel?
-
-🎵 **Feel the Beat, Anytime, Anywhere!**
-
-Music isn't just about listening – it's about feeling. With Trebel, you get a personalized music experience that fits your lifestyle. Our intuitive interface and user-friendly features make it easy to find your groove and keep it going. Plus, with our offline mode, the music never stops, even when the signal does.
-
-🌟 **Discover Your Soundtrack**
-
-Trebel offers a world of music at your fingertips. From the latest hits to classic tunes, find songs that match your vibe. Feeling happy, sad, or ready to party? We've got playlists for every mood! 🎉
-
-🔥 **Join the Music Revolution**
-
-Become part of the Trebel community and connect with fellow music lovers. Share your favorite tracks, explore new genres, and stay updated with exclusive content. Music is better when shared! ❤️
-
-<img src="assets/images/5.png" alt="Music Community" width="300" style="display: block; margin: 20px auto;"> <!-- Ganti dengan path ke gambar yang sesuai -->
+<img src="assets/images/4.png" alt="Music Vibes" width="600" style="display: block; margin: 20px auto;"> <!-- Ganti dengan path ke gambar yang sesuai -->
 
 ## Join the Trebel Community
 
@@ -69,8 +68,9 @@ Connect with us on social media and stay updated with the latest tracks, playlis
 - [Instagram]()
 - [X]()
 
-Feel free to reach out if you have any questions or just want to chat.
-[Follow my incredible mentor](https://github.com/sodikihwan), see you around!
+Feel free to reach out if you have any questions or just want to chat. Follow my incredible mentor, see you around!
+
+<img src="assets/images/5.png" alt="Music Community" width="600" style="display: block; margin: 20px auto;"> <!-- Ganti dengan path ke gambar yang sesuai -->
 
 ---
 
