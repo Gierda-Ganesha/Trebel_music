@@ -67,10 +67,10 @@ Become part of the Trebel community and connect with fellow music lovers. Share 
 Connect with us on social media and stay updated with the latest tracks, playlists, and exclusive content. We're more than just a music app – we're a community of music lovers, and we can't wait for you to join us!
 
 - [Instagram]()
-- [Useful Flutter Samples](https://docs.flutter.dev/cookbook)
+- [X]()
 
 Feel free to reach out if you have any questions or just want to chat.
-[Follow my incredible mentor](https://docs.flutter.dev/), see you around!
+[Follow my incredible mentor](https://github.com/sodikihwan), see you around!
 
 ---
 
