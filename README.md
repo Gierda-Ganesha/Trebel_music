@@ -1,8 +1,8 @@
 # Trebel
 
-<img src="assets/images/Logo1.png" alt="Logo" width="600" style="display: block; margin: 0 auto 10px auto;">
+<!-- <img src="assets/images/Logo1.png" alt="Logo" width="600" style="display: block; margin: 0 auto 10px auto;">
 
-Brighten up your day with music 😎
+Brighten up your day with music 😎 -->
 
 ## Welcome to Trebel
 
