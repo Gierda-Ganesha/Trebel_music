@@ -1,6 +1,6 @@
 # Trebel
 
-<img src="assets/images/logo1.png" alt="Logo" width="200" style="display: block; margin: 0 auto;">
+<img src="assets/images/Logo1.png" alt="Logo" width="200" style="display: block; margin: 0 auto;">
 
 Brighten up your day with music 😎
 
