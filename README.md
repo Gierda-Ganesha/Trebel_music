@@ -1,6 +1,6 @@
 # Trebel
 
-<img src="assets/images/logo1.png" alt="Logo" width="200">
+<img src="assets/images/Logo1.png" alt="Logo" width="200">
 
 Brighten up your day with music 😎
 
@@ -14,7 +14,7 @@ Welcome to **Trebel**, your ultimate destination for an unparalleled music strea
 
 Trebel is your ultimate music streaming app, designed to keep the vibes high and the music flowing. Whether you're chilling at home, working out, or on the go, Trebel has got you covered. With Trebel, you can:
 
-<img src="assets/images/2.png" alt="Listening to music" width="300"> <!-- Ganti dengan path ke gambar yang sesuai -->
+<img src="assets/images/2.png" alt="Listening to music" width="600"> <!-- Ganti dengan path ke gambar yang sesuai -->
 
 - **Stream unlimited music** for free 🎵
 - **Download songs** and listen offline 📲
@@ -23,7 +23,7 @@ Trebel is your ultimate music streaming app, designed to keep the vibes high and
 
 Say goodbye to boring moments and hello to a world of endless musical possibilities! 🌟
 
-<img src="assets/images/3.png" alt="Music Enjoyment" width="300"> <!-- Ganti dengan path ke gambar yang sesuai -->
+<img src="assets/images/3.png" alt="Music Enjoyment" width="600"> <!-- Ganti dengan path ke gambar yang sesuai -->
 
 ## Features
 
@@ -44,7 +44,7 @@ Celebrate your relaxing, happy, and even sad moments with our awesome features �
 
 Isn't that awesome?
 
-<img src="assets/images/4.png" alt="Music Vibes" width="300"> <!-- Ganti dengan path ke gambar yang sesuai -->
+<img src="assets/images/4.png" alt="Music Vibes" width="600"> <!-- Ganti dengan path ke gambar yang sesuai -->
 
 ## Why Trebel?
 
@@ -60,7 +60,7 @@ Trebel offers a world of music at your fingertips. From the latest hits to class
 
 Become part of the Trebel community and connect with fellow music lovers. Share your favorite tracks, explore new genres, and stay updated with exclusive content. Music is better when shared! ❤️
 
-<img src="assets/images/5.png" alt="Music Community" width="300"> <!-- Ganti dengan path ke gambar yang sesuai -->
+<img src="assets/images/5.png" alt="Music Community" width="600"> <!-- Ganti dengan path ke gambar yang sesuai -->
 
 ## Join the Trebel Community
 
