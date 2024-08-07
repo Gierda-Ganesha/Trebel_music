@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:music/features/home/presentation/pages/profile_page.dart';
 import 'package:music/features/home/presentation/pages/see_more.dart';
 import 'package:music/features/home/presentation/provider/recent_cards_provider.dart';
 import 'package:music/features/home/presentation/screen/login_page.dart';
-=======
 import 'package:music/features/home/presentation/pages/see_more_page.dart';
 import 'package:music/features/home/presentation/providers/recent_cards_provider.dart';
 import 'package:music/features/home/presentation/screen/login_page.dart';
 import 'package:music/features/home/presentation/widget/bottom_navigation.dart';
->>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
 import 'package:music/features/home/presentation/widget/card_section.dart';
 import 'package:music/features/home/presentation/widget/card_titles.dart';
 import 'package:music/features/home/presentation/widget/click_card.dart';
@@ -17,10 +14,7 @@ import 'package:music/features/home/presentation/widget/custom_card.dart';
 import 'package:music/features/home/presentation/widget/header_page.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-<<<<<<< HEAD
 import 'package:logger/logger.dart';
-=======
->>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -31,23 +25,17 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool _showPopup = false;
-<<<<<<< HEAD
   var logger = Logger();
   String userEmail = '';
-=======
   final Set<String> _sectionTitles =
       {}; // Set untuk menyimpan judul seksi yang sudah ditambahkan
   int _currentIndex = 0;
->>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
 
   @override
   void initState() {
     super.initState();
     _checkLoginStatus();
-<<<<<<< HEAD
     _getUserEmail();
-=======
->>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
   }
 
   Future<void> _checkLoginStatus() async {
@@ -71,7 +59,6 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-<<<<<<< HEAD
   Future<void> _getUserEmail() async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -79,8 +66,6 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-=======
->>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
   void _showPopupMessage() {
     Future.delayed(const Duration(seconds: 6), () {
       if (mounted) {
@@ -106,12 +91,9 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-<<<<<<< HEAD
   Future<void> _logout(BuildContext context) async {
     logger.d('User logged out');
-=======
   Future<void> _logout() async {
->>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('isLoggedIn', false);
     await prefs.setBool('isFirstLogin', true);
@@ -124,11 +106,9 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-<<<<<<< HEAD
   @override
   Widget build(BuildContext context) {
     final greeting = _getGreeting();
-=======
   void _addSectionIfNotExist(String title, List<Map<String, String>> titles) {
     if (!_sectionTitles.contains(title)) {
       _sectionTitles.add(title);
@@ -156,12 +136,10 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
->>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
         children: [
-<<<<<<< HEAD
           Column(
             children: [
               const SizedBox(height: 40.0),
@@ -282,7 +260,6 @@ class _HomePageState extends State<HomePage> {
           _buildPopupMessage(),
         ],
       ),
-=======
           _pages[_currentIndex],
           _buildPopupMessage(),
         ],
@@ -291,7 +268,6 @@ class _HomePageState extends State<HomePage> {
         currentIndex: _currentIndex,
         onTap: _onTap,
       ),
->>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
     );
   }
 
@@ -313,11 +289,8 @@ class _HomePageState extends State<HomePage> {
           child: const Text(
             "You're login is successful",
             style: TextStyle(
-<<<<<<< HEAD
               color: Colors.white,
-=======
               color: Color(0xff31363F),
->>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -325,7 +298,6 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-<<<<<<< HEAD
 
   Widget _buildRecentSection(RecentCardsProvider recentCardsProvider) {
     return Padding(
@@ -359,7 +331,6 @@ class _HomePageState extends State<HomePage> {
               },
             );
           },
-=======
 }
 
 class HomeContent extends StatelessWidget {
@@ -555,7 +526,6 @@ class ProfilePage extends StatelessWidget {
             );
           },
           child: const Text('Logout'),
->>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
         ),
       ),
     );
