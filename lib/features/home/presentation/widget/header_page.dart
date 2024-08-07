@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:music/home/musik_filter.dart';
-import 'package:music/home/podcast_filter.dart';
-import 'package:music/home/radio_filter.dart';
+import 'package:music/features/home/presentation/widget/musik_filter.dart';
+import 'package:music/features/home/presentation/widget/podcast_filter.dart';
+import 'package:music/features/home/presentation/widget/radio_filter.dart';
 
 /// Kelas utama untuk halaman header
 class HeaderPage extends StatefulWidget {
