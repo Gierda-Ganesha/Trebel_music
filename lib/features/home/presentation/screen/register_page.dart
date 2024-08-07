@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-import 'package:music/screen/login_page.dart'; // Import halaman Login
+import 'package:music/features/home/presentation/screen/login_page.dart'; // Import halaman Login
 
 /// Halaman Register
 class RegisterPage extends StatefulWidget {
@@ -83,6 +83,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       // Menampilkan video jika sudah terinisialisasi
       body: _controller.value.isInitialized
           ? Stack(

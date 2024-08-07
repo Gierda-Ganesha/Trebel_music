@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:music/home/home_page.dart';
 import 'package:video_player/video_player.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:music/screen/register_page.dart'; // Import halaman register
+import 'package:music/features/home/presentation/pages/home_page.dart';
+import 'package:music/features/home/presentation/screen/register_page.dart'; // Import halaman register
 
-/// Halaman Login
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -14,14 +13,10 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  // Kontroller untuk video background
   late VideoPlayerController _controller;
-  // Menyembunyikan atau menampilkan password
   bool _isPasswordVisible = false;
-  // Kunci untuk form validasi
   final _formKey = GlobalKey<FormState>();
 
-  // Daftar penyedia email yang valid
   final List<String> validEmailProviders = [
     'yahoo.com',
     'hotmail.com',
@@ -38,12 +33,10 @@ class _LoginPageState extends State<LoginPage> {
   @override
   void initState() {
     super.initState();
-    // Menginisialisasi video player
     _controller = VideoPlayerController.asset('assets/video/iklan.mp4')
       ..initialize().then((_) {
         if (mounted) {
           setState(() {});
-          // Mengatur video agar looping dan mute
           _controller.setLooping(true);
           _controller.setVolume(0.0);
           _controller.play();
@@ -53,7 +46,6 @@ class _LoginPageState extends State<LoginPage> {
       });
   }
 
-  // Fungsi untuk validasi email
   String? _validateEmail(String? value) {
     if (value == null || value.isEmpty) {
       return 'Email cannot be empty';
@@ -68,7 +60,6 @@ class _LoginPageState extends State<LoginPage> {
     return null;
   }
 
-  // Fungsi untuk validasi password
   String? _validatePassword(String? value) {
     if (value == null || value.isEmpty) {
       return 'Password cannot be empty';
@@ -78,20 +69,16 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void dispose() {
-    // Membersihkan video player saat widget dihapus
     _controller.dispose();
     super.dispose();
   }
 
-  // Fungsi login
   Future<void> _login() async {
     if (_formKey.currentState!.validate()) {
-      // Menyimpan status login ke SharedPreferences
       final prefs = await SharedPreferences.getInstance();
       await prefs.setBool('isLoggedIn', true);
 
       if (mounted) {
-        // Navigasi ke halaman HomePage setelah login berhasil
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (context) => const HomePage()),
@@ -103,6 +90,8 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset:
+          false, // Tambahkan ini untuk mencegah konten bergeser
       body: _controller.value.isInitialized
           ? Stack(
               children: [
@@ -275,7 +264,6 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  // Fungsi untuk membuat tombol login sosial media
   Widget _buildSocialLoginButton({
     required IconData icon,
     required String text,

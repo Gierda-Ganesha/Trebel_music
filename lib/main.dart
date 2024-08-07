@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:music/home/recent_cards_provider.dart';
+import 'package:music/features/home/presentation/providers/recent_cards_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:device_preview/device_preview.dart';
-import 'package:music/home/home_page.dart';
+import 'package:music/features/home/presentation/pages/home_page.dart';
 
 void main() {
   runApp(
-    DevicePreview(
-      enabled: true,
-      builder: (context) => MultiProvider(
-        providers: [
-          ChangeNotifierProvider(create: (_) => RecentCardsProvider()),
-        ],
-        child: const MyApp(),
-      ),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => RecentCardsProvider()),
+      ],
+      child: const MyApp(),
     ),
   );
 }
@@ -23,11 +19,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      locale: DevicePreview.locale(context),
-      builder: DevicePreview.appBuilder,
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
