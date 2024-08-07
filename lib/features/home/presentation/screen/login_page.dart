@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
+import 'package:music/features/home/presentation/pages/home_page.dart';
+import 'package:music/features/home/presentation/screen/register.dart';
+import 'package:video_player/video_player.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+=======
 import 'package:video_player/video_player.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:music/features/home/presentation/pages/home_page.dart';
 import 'package:music/features/home/presentation/screen/register_page.dart'; // Import halaman register
+>>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -16,6 +24,7 @@ class _LoginPageState extends State<LoginPage> {
   late VideoPlayerController _controller;
   bool _isPasswordVisible = false;
   final _formKey = GlobalKey<FormState>();
+  final TextEditingController _emailController = TextEditingController();
 
   final List<String> validEmailProviders = [
     'yahoo.com',
@@ -70,6 +79,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   void dispose() {
     _controller.dispose();
+    _emailController.dispose();
     super.dispose();
   }
 
@@ -77,6 +87,7 @@ class _LoginPageState extends State<LoginPage> {
     if (_formKey.currentState!.validate()) {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setBool('isLoggedIn', true);
+      await prefs.setString('userEmail', _emailController.text);
 
       if (mounted) {
         Navigator.pushReplacement(
@@ -144,6 +155,7 @@ class _LoginPageState extends State<LoginPage> {
                           const SizedBox(height: 20),
                           // Input email
                           TextFormField(
+                            controller: _emailController,
                             keyboardType: TextInputType.emailAddress,
                             style: const TextStyle(color: Colors.white),
                             decoration: InputDecoration(

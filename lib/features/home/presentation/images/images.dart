@@ -1,0 +1,37 @@
+class AppImages {
+  static const String image1 = 'assets/images/1.png';
+  static const String image2 = 'assets/images/2.png';
+  static const String image3 = 'assets/images/3.png';
+  static const String image4 = 'assets/images/4.png';
+  static const String image5 = 'assets/images/5.png';
+  static const String ambient = 'assets/images/Ambient.jpg';
+  static const String amigdala = 'assets/images/Amigdala.jpg';
+  static const String aruma = 'assets/images/Aruma.jpg';
+  static const String bernadya = 'assets/images/Bernadya.jpg';
+  static const String enjoy = 'assets/images/Enjoy.jpg';
+  static const String febyPutri = 'assets/images/feby putri.jpg';
+  static const String fourtwnty = 'assets/images/Fourtwnty.jpg';
+  static const String friut = 'assets/images/Friut.jpg';
+  static const String galauBanget = 'assets/images/Galau banget.jpg';
+  static const String galau1 = 'assets/images/Galau-1.jpg';
+  static const String galau = 'assets/images/Galau.jpg';
+  static const String happy = 'assets/images/Happy.jpg';
+  static const String hindia = 'assets/images/Hindia.jpg';
+  static const String indonesia = 'assets/images/Indonesia.jpg';
+  static const String kopiKustik = 'assets/images/Kopi kustik.jpg';
+  static const String lagiGalau = 'assets/images/Lagi Galau.jpg';
+  static const String nadinAmirzah = 'assets/images/Nadin Amirzah.jpg';
+  static const String pagi1 = 'assets/images/Pagi-1.jpg';
+  static const String pagi = 'assets/images/Pagi.jpg';
+  static const String panjiSakti = 'assets/images/Panji Sakti.png';
+  static const String payungTeduh = 'assets/images/Payung Teduh.jpg';
+  static const String sadLofi = 'assets/images/Sad Lofi.jpg';
+  static const String sedihBrutal = 'assets/images/Sedih Brutal.jpg';
+  static const String song1 = 'assets/images/Song 1.jpg';
+  static const String song2 = 'assets/images/Song 2.jpg';
+  static const String song3 = 'assets/images/Song 3.jpg';
+  static const String song4 = 'assets/images/Song 4.jpg';
+  static const String song5 = 'assets/images/Song 5.jpg';
+  static const String mixDangdut = 'assets/images/Mix Dangdut.jpg';
+  static const String mixEDM = 'assets/images/Mix EDM.jpg';
+}
