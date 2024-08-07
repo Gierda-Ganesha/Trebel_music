@@ -32,7 +32,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.6
   flutter_spinkit: ^5.2.1
-  device_preview: ^1.1.0
+  # device_preview: ^1.1.0
   video_player: ^2.5.1
   # video_player_win: ^2.0.0 # Hapus jika tidak digunakan
   font_awesome_flutter: ^10.0.0

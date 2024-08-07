@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:music/features/home/presentation/pages/profile_page.dart';
 import 'package:music/features/home/presentation/pages/see_more.dart';
 import 'package:music/features/home/presentation/provider/recent_cards_provider.dart';
 import 'package:music/features/home/presentation/screen/login_page.dart';
+=======
+import 'package:music/features/home/presentation/pages/see_more_page.dart';
+import 'package:music/features/home/presentation/providers/recent_cards_provider.dart';
+import 'package:music/features/home/presentation/screen/login_page.dart';
+import 'package:music/features/home/presentation/widget/bottom_navigation.dart';
+>>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
 import 'package:music/features/home/presentation/widget/card_section.dart';
 import 'package:music/features/home/presentation/widget/card_titles.dart';
 import 'package:music/features/home/presentation/widget/click_card.dart';
@@ -10,7 +17,10 @@ import 'package:music/features/home/presentation/widget/custom_card.dart';
 import 'package:music/features/home/presentation/widget/header_page.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+<<<<<<< HEAD
 import 'package:logger/logger.dart';
+=======
+>>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -21,14 +31,23 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool _showPopup = false;
+<<<<<<< HEAD
   var logger = Logger();
   String userEmail = '';
+=======
+  final Set<String> _sectionTitles =
+      {}; // Set untuk menyimpan judul seksi yang sudah ditambahkan
+  int _currentIndex = 0;
+>>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
 
   @override
   void initState() {
     super.initState();
     _checkLoginStatus();
+<<<<<<< HEAD
     _getUserEmail();
+=======
+>>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
   }
 
   Future<void> _checkLoginStatus() async {
@@ -52,6 +71,7 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
+<<<<<<< HEAD
   Future<void> _getUserEmail() async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -59,6 +79,8 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+=======
+>>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
   void _showPopupMessage() {
     Future.delayed(const Duration(seconds: 6), () {
       if (mounted) {
@@ -84,8 +106,12 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
+<<<<<<< HEAD
   Future<void> _logout(BuildContext context) async {
     logger.d('User logged out');
+=======
+  Future<void> _logout() async {
+>>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('isLoggedIn', false);
     await prefs.setBool('isFirstLogin', true);
@@ -98,13 +124,44 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
+<<<<<<< HEAD
   @override
   Widget build(BuildContext context) {
     final greeting = _getGreeting();
+=======
+  void _addSectionIfNotExist(String title, List<Map<String, String>> titles) {
+    if (!_sectionTitles.contains(title)) {
+      _sectionTitles.add(title);
+      _sections.add(CardSection(sectionTitle: title, titles: titles));
+    }
+  }
+
+  final List<Widget> _sections = [];
+
+  final List<Widget> _pages = [
+    const HomeContent(), // Ini adalah halaman konten Home
+    const Center(
+        child: Text('Search Page', style: TextStyle(color: Colors.white))),
+    const Center(
+        child: Text('Playlist Page', style: TextStyle(color: Colors.white))),
+    const Center(
+        child: Text('Premium Page', style: TextStyle(color: Colors.white))),
+  ];
+
+  void _onTap(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+>>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
         children: [
+<<<<<<< HEAD
           Column(
             children: [
               const SizedBox(height: 40.0),
@@ -225,6 +282,16 @@ class _HomePageState extends State<HomePage> {
           _buildPopupMessage(),
         ],
       ),
+=======
+          _pages[_currentIndex],
+          _buildPopupMessage(),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigation(
+        currentIndex: _currentIndex,
+        onTap: _onTap,
+      ),
+>>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
     );
   }
 
@@ -246,7 +313,11 @@ class _HomePageState extends State<HomePage> {
           child: const Text(
             "You're login is successful",
             style: TextStyle(
+<<<<<<< HEAD
               color: Colors.white,
+=======
+              color: Color(0xff31363F),
+>>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -254,6 +325,7 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+<<<<<<< HEAD
 
   Widget _buildRecentSection(RecentCardsProvider recentCardsProvider) {
     return Padding(
@@ -287,6 +359,203 @@ class _HomePageState extends State<HomePage> {
               },
             );
           },
+=======
+}
+
+class HomeContent extends StatelessWidget {
+  const HomeContent({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final greeting = _getGreeting();
+
+    return Column(
+      children: [
+        const SizedBox(height: 40.0),
+        Container(
+          color: Colors.black,
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                greeting,
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ProfilePage()),
+                  );
+                },
+                child: const CircleAvatar(
+                  child: Text(
+                    'K', // Ganti dengan huruf pertama dari nama pengguna
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 8.0),
+        const HeaderPage(),
+        const SizedBox(height: 15.0),
+        Expanded(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Consumer<RecentCardsProvider>(
+                    builder: (context, recentCardsProvider, child) {
+                      return recentCardsProvider.recentCards.isNotEmpty
+                          ? Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      const Text(
+                                        'Dengarkan Lagi',
+                                        style: TextStyle(
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const SeeMorePage()),
+                                          );
+                                        },
+                                        child: const Padding(
+                                          padding: EdgeInsets.only(right: 16.0),
+                                          child: Text(
+                                            'See More',
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.bold,
+                                              color: Color(0xffB3C8CF),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                const SizedBox(height: 10),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0, vertical: 8.0),
+                                  child: SizedBox(
+                                    height: 250,
+                                    child: ListView.builder(
+                                      scrollDirection: Axis.horizontal,
+                                      itemCount: recentCardsProvider
+                                          .recentCards.length,
+                                      itemBuilder: (context, index) {
+                                        final recentCard = recentCardsProvider
+                                            .recentCards[index];
+                                        return CustomCard(
+                                          cardTitle: recentCard['title'] ?? '',
+                                          cardSubtitle:
+                                              recentCard['subtitle'] ?? '',
+                                          imagePath: recentCard['image'] ?? '',
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    ClickCardPage(
+                                                  cardTitle:
+                                                      recentCard['title'] ?? '',
+                                                  cardSubtitle:
+                                                      recentCard['subtitle'] ??
+                                                          '',
+                                                  imagePath:
+                                                      recentCard['image'] ?? '',
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
+                          : const SizedBox.shrink();
+                    },
+                  ),
+                  CardSection(sectionTitle: 'Happy Pagi', titles: pagiTitles),
+                  CardSection(
+                      sectionTitle: 'Discover more', titles: discoverTitles),
+                  CardSection(sectionTitle: 'Galau', titles: galauTitles),
+                  CardSection(sectionTitle: 'Mix Song', titles: mixSong),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  String _getGreeting() {
+    final hour = DateTime.now().hour;
+    if (hour >= 3 && hour < 10) {
+      return 'Selamat Pagi';
+    } else if (hour >= 10 && hour < 15) {
+      return 'Selamat Siang';
+    } else if (hour >= 15 && hour < 19) {
+      return 'Selamat Sore';
+    } else if (hour >= 19 && hour < 23) {
+      return 'Selamat Malam';
+    } else {
+      return 'Selamat Tidur';
+    }
+  }
+}
+
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Profile Page'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () async {
+            final prefs = await SharedPreferences.getInstance();
+            await prefs.setBool('isLoggedIn', false);
+            await prefs.setBool('isFirstLogin', true);
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const LoginPage()),
+            );
+          },
+          child: const Text('Logout'),
+>>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
         ),
       ),
     );
