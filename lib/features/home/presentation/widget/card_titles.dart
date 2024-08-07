@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import 'package:music/features/home/presentation/images/images.dart';
-=======
 import 'package:music/features/home/presentation/items/images.dart';
->>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
 
 // Data untuk judul, subjudul, dan path gambar di bagian 'Happy Pagi'
 final List<Map<String, String>> pagiTitles = [

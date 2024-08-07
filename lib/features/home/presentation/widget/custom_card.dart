@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:logger/logger.dart';
-=======
->>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
 
 class CustomCard extends StatelessWidget {
   final String cardTitle;
@@ -20,17 +17,14 @@ class CustomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     var logger = Logger();
     return GestureDetector(
       onTap: () {
         logger.d('Card clicked: $cardTitle'); // Logging statement
         onTap();
       },
-=======
     return GestureDetector(
       onTap: onTap,
->>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
       child: Container(
         width: 160,
         margin: const EdgeInsets.only(right: 10),

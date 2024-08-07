@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:music/features/home/presentation/pages/see_more.dart';
 import 'package:music/features/home/presentation/provider/recent_cards_provider.dart';
 import 'package:music/features/home/presentation/widget/click_card.dart';
 import 'package:music/features/home/presentation/widget/custom_card.dart';
 import 'package:provider/provider.dart';
 import 'package:logger/logger.dart';
-=======
 import 'package:music/features/home/presentation/widget/click_card.dart';
 import 'custom_card.dart';
 import 'package:music/features/home/presentation/pages/see_more_page.dart';
 import 'package:music/features/home/presentation/providers/recent_cards_provider.dart';
 import 'package:provider/provider.dart';
->>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
 
 class CardSection extends StatelessWidget {
   final String sectionTitle;
@@ -26,10 +23,7 @@ class CardSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     var logger = Logger();
-=======
->>>>>>> 95caeaca3a0e5e98764abfa8108d4bb2fc36bd39
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
       child: Column(
